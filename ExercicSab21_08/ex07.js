@@ -5,25 +5,10 @@ let ano = prompt("Informe o ano de nascimento: ");
 let verificaAno = 2021 - ano;
 //console.log(verificaAno);
 
-if (verificaAno >= 18 || verificaAno <= 69) {
-    console.log(verificaAno + " ANOS" + " \nVOTO OBRIGATORIO"){
-        break
-    }
-    
-} else if (verificaAno >= 16 || verificaAno < 18 || verificaAno >= 70) {
-    console.log(verificaAno + " ANOS" + " \nVOTO OPCIONAL"){
-        break
-    }
-    
-} else {
-    console.log(verificaAno + " ANOS" + " \nVOTO NEGADO")
-}
-
-/* if (verificaAno < 16) {
-    console.log(verificaAno + " ANOS" + " \nVOTO NEGADO");
-} else if (verificaAno => 16 || verificaAno < 18) {
-    console.log(verificaAno + " ANOS" + " \nVOTO OPCIONAL");
-} else {
+if (verificaAno >= 18 && verificaAno < 70) {
     console.log(verificaAno + " ANOS" + " \nVOTO OBRIGATORIO");
+} else if (verificaAno == 16 || verificaAno == 17 || verificaAno >= 70) {
+    console.log(verificaAno + " ANOS" + " \nVOTO OPCIONAL");
+} else if (verificaAno < 16) {
+    console.log(verificaAno + " ANOS" + " \nVOTO NEGADO");
 }
- */
