@@ -45,8 +45,8 @@ console.log(v2);
 
 console.log();
 
-/* aluno.dados = funcion(){
-    return `O aluno ${this.nome.primeiro}, tem ${this.idade} anos, esta matriculado na turma ${this.turma}, do curso ${this.curso}`
-}
+aluno.dados = function () {
+    return `O aluno ${this.nome.primeiro}, tem ${this.idade} anos, esta matriculado na turma ${this.turma}, do curso ${this.curso}`;
+};
 
-console.log(aluno.dados("Gabriel")) */
+console.log(aluno.dados("Gabriel"));
