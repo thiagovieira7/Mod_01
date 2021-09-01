@@ -9,6 +9,21 @@ campeão. */
 
 const prompt = require("prompt-sync")();
 
-let rodadas = prompt("Quantas rodadas deseja jogar? ");
+let rodadas = +prompt("Quantas rodadas deseja jogar? ");
 
-let jogadores = prompt("Quantos jogadores irão participar? ");
+let jogadores = +prompt("Quantos jogadores irão participar? ");
+
+for (let i = 0; i <= rodadas; i++) {
+    console.log("Rodada");
+    let jogador = {
+        nome: prompt("digite um nome: "),
+        dado: "",
+    };
+    console.log(jogador.nome);
+}
+
+let lista = [];
+lista.push(prompt("digite algo: "));
+//lista.push(prompt("digite algo: "));
+//lista.push(prompt("digite algo: "));
+console.log(lista);
