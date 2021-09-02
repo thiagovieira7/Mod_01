@@ -31,7 +31,7 @@ console.log("______________________________");
 
 // props = properties = propriedades por boa pratica utilizar para dizer que estamos percorrendo as propriedades da lista
 
-const props = Object.keys(filme);
+const props = Object.keys(filme); // props
 console.log(props);
 console.log("_____________");
 for (let i = 0; i < props.length; i++) {
@@ -46,3 +46,11 @@ console.log("______________________________//__________________________");
 for (const prop of props) {
     console.log(filme[prop]);
 }
+console.log("//__________________________________________//");
+// pegar propriedade e valor
+
+for (const prop in filme) {
+    console.log(prop, filme[prop]);
+}
+
+
