@@ -1,32 +1,16 @@
 // Criar um objeto pra cada jogador com nome e número tirado;
 //Guarda todos os objetos em uma lista;
 
+
 const prompt = require("prompt-sync")();
 
-let jogadores = +prompt("Quantos jogadores irão participar? ");
+let listasJogadores = [];
+let jogadores = prompt("Informe o numero de jogadores: ");
 
-
-
-let listJogs = {};
-const pessoas = [
-    {
-        nomeJog: "Maria",
-        numTir: 30,
-    },
-];
-
-
-for (let i = 0; i <= jogadores; i++) {
-    console.log("Rodada");
-    let jogador = {
-        nome: prompt("digite um nome: "),
-        dado: "",
-    };
-    console.log(jogador.nome);
+for (let i = 0; i < jogadores; i++) {
+    let jogadorAtual = {};
+    (jogadorAtual.nome = prompt("digite um nome: ")),
+        (jogadorAtual.aposta = prompt("Escolha sua aposta: ")),
+        listasJogadores.push(jogadorAtual);
 }
-
-let lista = [];
-lista.push(prompt("digite algo: "));
-//lista.push(prompt("digite algo: "));
-//lista.push(prompt("digite algo: "));
-console.log(lista);
+console.log(listasJogadores);
