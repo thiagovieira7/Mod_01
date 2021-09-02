@@ -10,18 +10,19 @@ const prompt = require("prompt-sync");
 
 console.log("Venda chocolate");
 
-let qtd = prompt ("Informe a quantidade: ");
+let qtd = prompt("Informe a quantidade: ");
 
-const produto ={
-    nome:"chocolate",
-    valor:5.00
-    
+const produto = {
+    nome: "chocolate",
+    valor: 5.0,
+};
+
+if (qtd < 100.0) {
+    console.log(
+        "\nQuantidade total: " +
+            qtd +
+            "\nvalor unitario R$5,00" +
+            "\nTotal de: R$" +
+            qtd * produto.valor,
+    );
 }
-
-if (qtd < 100.00){
-    
-    console.log("\nQuantidade total: "+qtd+ "\nvalor unitario R$5,00" + "\nTotal de: R$" +qtd * ${produto.valor})
-}
-
-
-
