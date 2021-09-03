@@ -16,8 +16,7 @@ for (i = 0; i < rodadas; i++) {
             let numDados = Math.floor(Math.random() * 6 + 1);
             console.log(numDados);
 
-            listajog[i]
-            
+            listajog[i];
         }
     }
 }
