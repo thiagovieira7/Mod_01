@@ -4,6 +4,8 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        "runtimeExecutable": "nodemon",
+        "restart": true
     
         {
             "type": "pwa-node",
@@ -15,8 +17,7 @@
             
             "program": "${workspaceFolder}/app.js","\\Projetos_Curso\\Proj_03\\testes.js"
 
-            "runtimeExecutable": "nodemon",
-            "restart": true
+            
             
         }
     ]
