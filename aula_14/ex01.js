@@ -15,10 +15,13 @@ let qtd = prompt("Informe a quantidade: ");
 const produto = {
     nome: "chocolate",
     valor: 5.0,
-    
+    desc01: 0.1,
+    desc02: 0.15,
+    desc03: 0.2,
 };
 
-if (qtd < 100.0)0 {
+if (qtd <= 100.0) {
+    console.log("1°");
     console.log(
         "\nQuantidade total: " +
             qtd +
@@ -26,13 +29,40 @@ if (qtd < 100.0)0 {
             "\nTotal de: R$" +
             qtd * produto.valor,
     );
-
-} else if (qtd => 100.00) {
+} else if (qtd > 100.0 && qtd < 400) {
+    console.log("2°");
+    let qtl = qtd * produto.valor;
+    let qdes = qtl * produto.desc01;
+    let totalg = qtl - qdes;
     console.log(
         "\nQuantidade total: " +
             qtd +
             "\nvalor unitario R$5,00" +
             "\nTotal de: R$" +
-            qtd * produto.valor),
-
+            totalg,
+    );
+} else if (qtd >= 400 && qtd <= 500) {
+    console.log("3°");
+    let qtl = qtd * produto.valor;
+    let qdes = qtl * produto.desc02;
+    let totalg = qtl - qdes;
+    console.log(
+        "\nQuantidade total: " +
+            qtd +
+            "\nvalor unitario R$5,00" +
+            "\nTotal de: R$" +
+            totalg,
+    );
+} else {
+    console.log("4°");
+    let qtl = qtd * produto.valor;
+    let qdes = qtl * produto.desc03;
+    let totalg = qtl - qdes;
+    console.log(
+        "\nQuantidade total: " +
+            qtd +
+            "\nvalor unitario R$5,00" +
+            "\nTotal de: R$" +
+            totalg,
+    );
 }
