@@ -10,59 +10,64 @@ const prompt = require("prompt-sync")();
 
 console.log("Venda chocolate");
 
-let qtd = prompt("Informe a quantidade: ");
+//let qtd = prompt("Informe a quantidade: ");
 
-const produto = {
-    nome: "chocolate",
-    valor: 5.0,
-    desc01: 0.1,
-    desc02: 0.15,
-    desc03: 0.2,
-};
+const produto = {};
+produto.nome = "chocolate";
+produto.valor = +prompt("informe o valor: ");
+produto.qtd = +prompt("Informe a quntidade: ");
+produto.desc01 = 0.1;
+produto.desc02 = 0.15;
+produto.desc03 = 0.2;
 
-if (qtd <= 100.0) {
+if (produto.qtd <= 100.0) {
+    let totalg = produto.qtd * produto.valor;
     console.log("1°");
     console.log(
         "\nQuantidade total: " +
-            qtd +
-            "\nvalor unitario R$5,00" +
+            produto.qtd +
+            "\nvalor unitario R$" +
+            produto.valor.toFixed(2) +
             "\nTotal de: R$" +
-            qtd * produto.valor,
+            totalg.toFixed(2),
     );
-} else if (qtd > 100.0 && qtd < 400) {
+} else if (produto.qtd > 100.0 && produto.qtd < 400) {
     console.log("2°");
-    let qtl = qtd * produto.valor;
+    let qtl = produto.qtd * produto.valor;
     let qdes = qtl * produto.desc01;
     let totalg = qtl - qdes;
     console.log(
         "\nQuantidade total: " +
-            qtd +
-            "\nvalor unitario R$5,00" +
+            produto.qtd +
+            "\nvalor unitario R$" +
+            produto.valor.toFixed(2) +
             "\nTotal de: R$" +
-            totalg,
+            totalg.toFixed(2),
     );
-} else if (qtd >= 400 && qtd <= 500) {
+} else if (produto.qtd >= 400 && produto.qtd <= 500) {
     console.log("3°");
-    let qtl = qtd * produto.valor;
+    let qtl = produto.qtd * produto.valor;
     let qdes = qtl * produto.desc02;
     let totalg = qtl - qdes;
     console.log(
         "\nQuantidade total: " +
-            qtd +
-            "\nvalor unitario R$5,00" +
+            produto.qtd +
+            "\nvalor unitario R$" +
+            produto.valor.toFixed(2) +
             "\nTotal de: R$" +
-            totalg,
+            totalg.toFixed(2),
     );
 } else {
     console.log("4°");
-    let qtl = qtd * produto.valor;
+    let qtl = produto.qtd * produto.valor;
     let qdes = qtl * produto.desc03;
     let totalg = qtl - qdes;
     console.log(
         "\nQuantidade total: " +
-            qtd +
-            "\nvalor unitario R$5,00" +
+            produto.qtd +
+            "\nvalor unitario R$" +
+            produto.valor.toFixed(2) +
             "\nTotal de: R$" +
-            totalg,
+            totalg.toFixed(2),
     );
 }
