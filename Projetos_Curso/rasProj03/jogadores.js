@@ -1,6 +1,5 @@
 const prompt = require("prompt-sync")();
 
-
 /* let jogadores = +prompt("Quantos jogadores irão participar? ");
 
 let listJogs = {};
@@ -26,12 +25,12 @@ lista.push(prompt("digite algo: "));
 //lista.push(prompt("digite algo: "));
 console.log(lista);
  */
-
-let listajog = []
-while (listajog < jogadores){
-    let JogIndiv ={
-        JogIndiv.nome: prompt("Informe o nome: "),
-
-        
-    }
+let jogadores = +prompt("informe a quantidade de jogadores: ");
+let listajog = [];
+for (i = 0; i < jogadores; i++) {
+    let JogIndiv = {
+        nome: prompt("Informe o nome do jogador: "),
+    };
+    listajog.push(JogIndiv);
 }
+

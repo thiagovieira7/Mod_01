@@ -5,11 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
-            "request": "launch",
+            "type": "npwa-ode",
+            "request": "attach",
+            "protocol": "inspector"
+            
             "name": "Launch Program",
-            "url": "http://logalhost:5500",
-            "webRoot": "${workspaceFolder}"
+            "skipFiles": ["<node_internals>/**"]
+            //"url": "http://logalhost:5500",
+            // "webRoot": "${workspaceFolder}"
         }
     ]
 }
