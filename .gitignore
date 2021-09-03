@@ -2,3 +2,9 @@ node_modules
 cache/
 TEMP/
 testes.js
+debug-project
+app.js
+package-lock.json
+package.json
+locator
+prettierrc.json
