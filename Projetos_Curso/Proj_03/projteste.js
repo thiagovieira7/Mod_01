@@ -5,6 +5,7 @@ let listajog = [];
 for (i = 0; i < jogadores; i++) {
     let JogIndiv = {
         nome: prompt("informe o nome do jogador: "),
+        listaJogada: []
     };
     listajog.push(JogIndiv);
 }
@@ -16,10 +17,11 @@ for (i = 0; i < rodadas; i++) {
             let numDados = Math.floor(Math.random() * 6 + 1);
             console.log(numDados);
 
-            listajog[i];
+            listajog[i].listaJogada.push();
         }
     }
 }
 
 let numDados = Math.floor(Math.random() * 6 + 1);
 console.log(numDados);
+

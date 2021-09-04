@@ -5,10 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "npwa-ode",
+            "type": "node",
             "request": "attach",
-            "protocol": "inspector"
-            
+            "restart": true,
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"]
             //"url": "http://logalhost:5500",
