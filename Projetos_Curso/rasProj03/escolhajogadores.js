@@ -14,11 +14,4 @@ for (let i = 0; i < jogadores; i++) {
     console.log(listasJogadores);
 }
 
-listasJogadores.sort((a, b) => {
-    if (b.dadosJog < a.dadosJog) {
-        return -1;
-    } else {
-        return true;
-    }
-});
-console.log(listasJogadores);
+

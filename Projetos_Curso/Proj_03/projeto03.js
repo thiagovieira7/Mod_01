@@ -1,3 +1,5 @@
+//crie um programa onde jogadores joguem um dado e tenham resultados aleatórios.
+
 const prompt = require("prompt-sync")();
 let rodadas = +prompt("Quantas rodadas deseja jogar? ");
 let numeroTotalJogadores = +prompt("informe a quantidade de jogadores: ");
@@ -32,29 +34,8 @@ for (i2 = 0; i2 < rodadas; i2++) {
     });
 
     console.log("\nO vencedor da rodada é o " + listaJogosDeJogadores[0].nome);
-    
+
     listaRodadas.push(listaJogosDeJogadores);
 }
 
- console.log(listaRodadas);
-
-// /* console.log(
-//     "O jogador " +
-//         listaDeJogadores +
-//         " é o campeão com total de " +
-//         listaDeJogadores.listaJogadoresResultado +
-//         " vitorias...",
-// );
-//  */
-
-// /* let soma = 0;
-// for (i=0; i < listaDeJogadores; i++){
-//     soma = () {
-//         nome=listaDeJogadores.nome;
-//         resultadoFinal = soma;
-//     }
-
-// } */
-
-// //console.log("\nO CAMPEÃO é: " + listaDeJogadores);
-// console.log(listaDeJogadores);
+console.log(listaRodadas);
