@@ -14,28 +14,29 @@ Save > Resolve: "Dados salos" - Reject: "Falha ao salvar dados".
 
 */
 
-const prompt = require('prompt-sync')()
+const prompt = require("prompt-sync")();
 
-function enviarEmail(corpo, para){
-    return new Promise((resolve, reject) =>{
-        
-        setTimeout(funcion(){
+function enviarEmail(corpo, para) {
+    return new Promise((resolve, reject) => {
+        setTimeout(function () {
             let deuerro = false;
 
-            if(!deuerro){
+            if (!deuerro) {
                 resolve(); //Promessa ok!
-            } else {   
+            } else {
                 reject(); //foi mau, eu falhei a missao
             }
         }, 5000);
-
-        
-    })
-
-
+    });
 }
+// usamos o .the para programa executar açoes que eu quiser quando a promise for Resolve.
+//Usamos o .catch para fazer o tratamento da promise, ou seja, como meu programa deve se comportar quando status da promise
+enviarEmail("Ola Bluemers ;) ", "avestruzquetesedez@gmail.com")
+    .then(function () {
+        console.log("Opa, voce fez o que prometeu!");
+    })
+    .catch(function () {
+        console.log("Que pena, dessa vez nao rolou");
+    });
 
-enviarEmail("Ola Bluemers ;) ","avestruzquetesedez@gmail.com").then(funcion(){
-    console.log("Opa, voce fez o que prometeu!");
-}   
-);
+    
