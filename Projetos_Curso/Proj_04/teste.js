@@ -3,9 +3,21 @@ const prompt = require("prompt-sync")();
 let novoVoto = "SIM";
 
 votoCand = {
-    candidato_1: 0,
-    candidato_2: 0,
-    candidato_3: 0,
+    candidato_1: {
+        nome: "Candidato 1",
+        qtdVotos: 0,
+    },
+    candidato_2: {
+        nome: "candidato 2",
+        qtdVotos: 0,
+    },
+    candidato_3: {
+        nome: "Candidato 3",
+        qtdVotos: 0,
+    },
+};
+
+votosBrancosNulos = {
     voto_Nulo: 0,
     voto_Em_Branco: 0,
 };
@@ -31,15 +43,15 @@ console.log(`${autorizacaoUsuario}`);
 function votacao(autorizacao, voto) {
     if (autorizacao == "VOTO OPCIONAL" || autorizacao == "VOTO OBRIGATORIO") {
         if (voto == 1) {
-            votoCand.candidato_1 += 1;
+            votoCand.candidato_1.qtdVotos += 1;
         } else if (voto == 2) {
-            votoCand.candidato_2 += 1;
+            votoCand.candidato_2.qtdVotos += 1;
         } else if (voto == 3) {
-            votoCand.candidato_3 += 1;
+            votoCand.candidato_3.qtdVotos += 1;
         } else if (voto == 4) {
-            votoCand.voto_Nulo += 1;
+            votosBrancosNulos.voto_Nulo += 1;
         } else if (voto == 5) {
-            votoCand.voto_Em_Branco += 1;
+            votosBrancosNulos.voto_Em_Branco += 1;
         } else {
             console.log("\nNUMERO DO CANDIDATO INVALIDO\n");
         }
@@ -48,6 +60,43 @@ function votacao(autorizacao, voto) {
     }
 }
 
+function exibirResultados() {
+    console.log("------------------------------------------------------------");
+    console.log(
+        "Candidato 1 = " + `${votoCand.candidato_1.qtdVotos}` + " votos",
+    );
+    console.log(
+        "Candidato 2 = " + `${votoCand.candidato_2.qtdVotos}` + " votos",
+    );
+    console.log(
+        "Candidato 3 = " + `${votoCand.candidato_3.qtdVotos}` + " votos",
+    );
+    console.log("Votos nulos = " + `${votosBrancosNulos.voto_Nulo}` + " votos");
+    console.log(
+        "Votos em branco  = " +
+            `${votosBrancosNulos.voto_Em_Branco}` +
+            " votos",
+    );
+    console.log("------------------------------------------------------------");
+    if (
+        votoCand.candidato_3.qtdVotos > votoCand.candidato_2.qtdVotos &&
+        votoCand.candidato_3.qtdVotos > votoCand.candidato_1.qtdVotos
+    ) {
+        console.log("CANDIDATO 03 VENCEU A VOTAÇÃO...\n");
+    } else if (
+        votoCand.candidato_2.qtdVotos > votoCand.candidato_1.qtdVotos &&
+        votoCand.candidato_2.qtdVotos > votoCand.candidato_3.qtdVotos
+    ) {
+        console.log("CANDIDATO 02 VENCEU A VOTAÇÃO...\n");
+    } else if (
+        votoCand.candidato_1.qtdVotos > votoCand.candidato_2.qtdVotos &&
+        votoCand.candidato_1.qtdVotos > votoCand.candidato_3.qtdVotos
+    ) {
+        console.log("CANDIDATO 01 VENCEU A VOTAÇÃO...\n");
+    } else {
+        console.log("EMPATE\n");
+    }
+}
 while (novoVoto == "SIM") {
     let CanditLista = [
         "nº- Nome",
@@ -61,7 +110,7 @@ while (novoVoto == "SIM") {
     console.log(CanditLista);
     let votarCandidato = +prompt("Informe o numero do candidato: ");
     votacao(autorizacaoUsuario, votarCandidato);
-    console.log(votoCand);
+
     console.log("------------------------------------");
     novoVoto = prompt("Deseja inserir novo voto? ");
     console.log("------------------------------------");
@@ -69,17 +118,4 @@ while (novoVoto == "SIM") {
 }
 
 console.log("\nFim da votação...\n");
-
-function exibirResultados() {
-    console.log("------------------------------------------------------------");
-    console.log("Candidato 1 = " + `${votoCand.candidato_1}` + " votos");
-    console.log("Candidato 2 = " + `${votoCand.candidato_2}` + " votos");
-    console.log("Candidato 3 = " + `${votoCand.candidato_3}` + " votos");
-    console.log("Votos nulos = " + `${votoCand.voto_Nulo}` + " votos");
-    console.log(
-        "Votos em branco  = " + `${votoCand.voto_Em_Branco}` + " votos",
-    );
-    console.log("------------------------------------------------------------");
-}
-
 exibirResultados(votoCand);
