@@ -53,6 +53,7 @@ function votacao(autorizacao, voto) {
         }
     } else {
         console.log("Você não pode votar...");
+        process.exit(0);
     }
 }
 
