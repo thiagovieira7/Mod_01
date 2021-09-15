@@ -10,8 +10,8 @@
             "restart": true,
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"]
-            //"url": "http://logalhost:5500",
-            // "webRoot": "${workspaceFolder}"
+            "url": "http://logalhost:3000",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
