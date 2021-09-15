@@ -1,2 +1,4 @@
-let var teste = 005
-console.log(teste)
+let teste = 005;
+setTimeout(function () {
+    console.log(teste);
+}, 5000);
