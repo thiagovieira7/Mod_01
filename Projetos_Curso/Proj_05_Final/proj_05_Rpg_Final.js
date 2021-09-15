@@ -1,8 +1,6 @@
 const prompt = require("prompt-sync")();
 
 class Refeicao {
-    // Todos os animais terão esses atributos.
-
     constructor(refeicao1) {
         this.refeicao1 = refeicao1;
     }
