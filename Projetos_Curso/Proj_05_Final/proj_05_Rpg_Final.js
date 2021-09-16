@@ -152,7 +152,7 @@ while (continuar) {
                 trabalho == "E-MAILS"
             ) {
                 console.log(" * Verificando e-mails....");
-                sleep(5000);
+                sleep(2000);
                 function enviarEmail(corpo, para) {
                     setTimeout(function () {
                         console.log(`
@@ -164,7 +164,7 @@ while (continuar) {
                   De: Operacoes_Comerciais
           
                    `);
-                    }, 4000);
+                    }, 2000);
                 }
 
                 console.log(" * Início do envio do email!");
