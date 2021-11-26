@@ -1,0 +1,32 @@
+//PROJETO DETETIVE
+
+let lista = []
+
+console.log ("\nQUESTIONARIO CENA DO CRIME");
+let pergu = prompt("\nInforme o nome da pessoa: ");
+
+
+lista.push(prompt("\nTelefonou para vitima? "));
+lista.push(prompt("Esteve no local do crime? "));
+lista.push(prompt("Mora perto da vitima? "));
+lista.push(prompt("Devia para vitima? "));
+lista.push(prompt("Ja trabalhou com a vitima? "));
+let yes = 0
+for(conta = 0; conta <= 4; conta++){
+  if (lista[conta] == "sim"){
+    yes++
+       
+  }
+   
+}
+ 
+ if (yes < 2){
+   console.log("\nInocente");
+ }else if ( yes == 2){
+   console.log("\nSuspeito");
+ }else if (yes <= 4){
+   console.log ("\nCumplice");
+ }else if (yes == 5){
+   console.log("\nAssassino");
+ }
+ 
